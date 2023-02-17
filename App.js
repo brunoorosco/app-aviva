@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Suspense, lazy } from 'react'
+import { Alert, Button, StyleSheet, Text, View } from 'react-native'
 
 export default function App() {
+  const Camera = lazy(() => import('./pages/Camera'))
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <>
+      <Suspense fallback={<Text>Carregando...</Text>}>
+        {/* <NavigatorContainer>
+        <Stack.Navigator>
+
+        </Stack.Navigator>
+      </NavigatorContainer> */}
+        <Camera />
+      </Suspense>
+    </>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#efefef',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    justifyContent: 'center'
+  }
+})
