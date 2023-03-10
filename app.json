@@ -1,0 +1,45 @@
+{
+    "expo": {
+        "name": "Aviva App",
+        "slug": "my-app-aviva",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./src/assets/logo-preto.png",
+        "extra.eas.projectId": "aviva-app",
+        "userInterfaceStyle": "light",
+        "splash": {
+            "image": "./src/assets/logo-preto.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0,
+            "url": "https://u.expo.dev/d05a792d-2a5d-41eb-8ea5-73d613515694"
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "supportsTablet": true
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./src/assets/logo-preto.png",
+                "backgroundColor": "rgba(250,250,250,0.6)",
+                "resizeMode": "contain"
+            },
+            "package": "com.brunoorosco.myappaviva"
+        },
+        "web": {
+            "favicon": "./src/assets/logo-preto.png"
+        },
+        "extra": {
+            "eas": {
+                "projectId": "d05a792d-2a5d-41eb-8ea5-73d613515694"
+            }
+        },
+        "runtimeVersion": {
+            "policy": "sdkVersion"
+        }
+    }
+}
