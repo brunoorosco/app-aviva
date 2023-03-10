@@ -1,27 +1,16 @@
-import React, { Suspense, lazy } from 'react'
-import { Alert, Button, StyleSheet, Text, View } from 'react-native'
+import Header from './src/components/Header'
+import Toast from 'react-native-toast-message'
+import { Routes } from './src/routes'
+import { StatusBar } from 'react-native'
 
 export default function App() {
-  const Camera = lazy(() => import('./pages/Camera'))
+  // const Camera = lazy(() => import('./src/pages/QrCode'))
   return (
     <>
-      <Suspense fallback={<Text>Carregando...</Text>}>
-        {/* <NavigatorContainer>
-        <Stack.Navigator>
-
-        </Stack.Navigator>
-      </NavigatorContainer> */}
-        <Camera />
-      </Suspense>
+      <StatusBar />
+      <Header name="Usuário Teste" />
+      <Toast />
+      <Routes />
     </>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#efefef',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
